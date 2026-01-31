@@ -23,8 +23,14 @@
             --stay-border: #c5cae9;
             --stay-text: #3949ab;
 
+            /* Transport Bar (Divider) */
             --trans-bg: #e1f5fe;
             --trans-text: #0277bd;
+
+            /* Transport Card (Blue Block) */
+            --trans-card-bg: #e3f2fd;
+            --trans-card-border: #90caf9;
+            --trans-card-text: #1565c0;
 
             /* Note (Peach) */
             --note-bg: #fce4ec;
@@ -35,6 +41,11 @@
             --urgent-bg: #ffebee;
             --urgent-border: #ef9a9a;
             --urgent-text: #c62828;
+
+            /* Shop (Light Gray) */
+            --shop-bg: #f8f9fa;
+            --shop-border: #dee2e6;
+            --shop-text: #495057;
         }
 
         body {
@@ -133,7 +144,7 @@
         /* --- Cards Style --- */
         .timeline-wrapper { position: relative; padding-bottom: 20px; }
         
-        /* Transport Bar */
+        /* Transport Bar (The divider line style) */
         .transport-bar {
             background-color: var(--trans-bg);
             color: var(--trans-text);
@@ -219,6 +230,13 @@
         .item-card.urgent { background: var(--urgent-bg); border: 1px solid var(--urgent-border); border-left-color: var(--urgent-text); }
         .item-card.urgent .item-title { color: var(--urgent-text); }
 
+        /* Shop (Light Gray) */
+        .item-card.shop { background: var(--shop-bg); border: 1px solid var(--shop-border); border-left-color: var(--shop-text); }
+        .item-card.shop .item-title { color: var(--shop-text); }
+
+        /* Transport Card (Blue Block) */
+        .item-card.transport-card { background: var(--trans-card-bg); border: 1px solid var(--trans-card-border); border-left-color: var(--trans-card-text); }
+        .item-card.transport-card .item-title { color: var(--trans-card-text); }
 
         /* Weather Plans (D5) */
         .weather-plan {
@@ -229,7 +247,7 @@
         .plan-bad { background: #f8f9fa; border-left: 4px solid #95a5a6; }
         .weather-title { font-weight: bold; display: block; margin-bottom: 8px; font-size: 1rem; }
         .weather-plan ul { padding-left: 20px; margin: 5px 0; }
-        .weather-plan li { margin-bottom: 4px; color: #555; }
+        .weather-plan li { margin-bottom: 8px; color: #555; line-height: 1.5; }
         .weather-plan a { color: #333; text-decoration: underline; }
 
         /* --- Side Menu --- */
@@ -397,7 +415,7 @@
             <span class="hotel-name">1. 東京市區 (D1-D3)</span>
             <span class="hotel-note">📍 點此導航</span>
         </a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Gotemba+Station" target="_blank" class="hotel-link">
+        <a href="https://maps.app.goo.gl/vs721as7EqZz1hre9" target="_blank" class="hotel-link">
             <span class="hotel-name">2. 御殿場周邊 (D4)</span>
             <span class="hotel-note">📍 點此導航</span>
         </a>
@@ -436,7 +454,7 @@
                 <div class="time-row"><span>14:45</span><span>20:10</span></div>
             </div>
 
-            <div class="transport-bar">✈️ 機場 ➝ 🚄 Skyliner ➝ 日暮里</div>
+            <div class="transport-bar">✈️ 機場 ➝ 🚄 Skyliner ➝ 日暮里 ➝ 轉山手線到駒込</div>
 
             <div class="item-card stay" onclick="window.open('https://www.google.com/maps?cid=15463035338212554993')">
                 <div class="item-icon">🏨</div>
@@ -468,7 +486,7 @@
                 </div>
             </div>
 
-            <div class="transport-bar">🚇 駒込 ➝ 御徒町</div>
+            <div class="transport-bar">🚇 駒込 ➝ 搭山手線 ➝ 御徒町</div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Yushima+Tenmangu')">
                 <div class="item-icon">🌸</div>
@@ -479,7 +497,7 @@
                 </div>
             </div>
 
-            <div class="item-card food" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Don+Quijote+Ueno')">
+            <div class="item-card shop" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Don+Quijote+Ueno')">
                 <div class="item-icon">📷</div>
                 <div class="item-info">
                     <span class="time-badge">隨後</span>
@@ -495,16 +513,25 @@
                 <div class="item-info">
                     <span class="time-badge">10:40</span>
                     <span class="item-title">淺草午餐</span>
-                    <span class="item-desc">炸豬排 或 鰻魚飯。</span>
+                    <span class="item-desc">炸豬排。</span>
                 </div>
             </div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Senso-ji')">
                 <div class="item-icon">🏮</div>
                 <div class="item-info">
-                    <span class="time-badge">12:00</span>
-                    <span class="item-title">淺草寺 & 晴空塔</span>
+                    <span class="time-badge">下午</span>
+                    <span class="item-title">淺草寺</span>
                     <span class="item-desc">雷門拍照、逛仲見世通。</span>
+                </div>
+            </div>
+
+            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree')">
+                <div class="item-icon">🗼</div>
+                <div class="item-info">
+                    <span class="time-badge">下午</span>
+                    <span class="item-title">晴空塔</span>
+                    <span class="item-desc">逛街、拍照。</span>
                 </div>
             </div>
 
@@ -527,13 +554,19 @@
                 <div class="item-icon">⏰</div>
                 <div class="item-info">
                     <span class="item-title">06:30 起床</span>
-                    <span class="item-desc">07:00 出門。</span>
+                </div>
+            </div>
+
+            <div class="item-card note">
+                <div class="item-icon">🚪</div>
+                <div class="item-info">
+                    <span class="item-title">07:00 出門</span>
                 </div>
             </div>
 
             <div class="transport-bar">🚇 市區 ➝ 築地</div>
 
-            <div class="item-card food" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Tsukiji+Outer+Market')">
+            <div class="item-card food" onclick="window.open('https://maps.app.goo.gl/bsi6rxjMer4Aqo5G8')">
                 <div class="item-icon">🍣</div>
                 <div class="item-info">
                     <span class="time-badge">07:40</span>
@@ -546,8 +579,8 @@
                 <div class="item-icon">📸</div>
                 <div class="item-info">
                     <span class="time-badge">09:30</span>
-                    <span class="item-title">勝鬨橋</span>
-                    <span class="item-desc">隅田川散步拍照。</span>
+                    <span class="item-title">勝鬨橋/隅田川</span>
+                    <span class="item-desc">散步拍照。過橋去搭地鐵。</span>
                 </div>
             </div>
 
@@ -640,11 +673,35 @@
                 <div class="item-icon">♨️</div>
                 <div class="item-info">
                     <span class="item-title">木之花之湯 (溫泉)</span>
-                    <span class="item-desc">或前往時之栖。</span>
+                    <span class="item-desc">Outlet旁日歸溫泉。</span>
                 </div>
             </div>
 
-            <div class="item-card stay" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Gotemba+Station')">
+            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Higashiyama+Kyukishi')">
+                <div class="item-icon">🍵</div>
+                <div class="item-info">
+                    <span class="item-title">東山旧岸邸＋とらや工房</span>
+                    <span class="item-desc">傳統建築與和菓子。</span>
+                </div>
+            </div>
+
+            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Otome+Pass')">
+                <div class="item-icon">🔔</div>
+                <div class="item-info">
+                    <span class="item-title">乙女峠／乙女の鐘</span>
+                    <span class="item-desc">眺望富士山景點。</span>
+                </div>
+            </div>
+
+            <div class="item-card spot" onclick="window.open('https://maps.app.goo.gl/74EMP8BaGkEX6koz6')">
+                <div class="item-icon">✨</div>
+                <div class="item-info">
+                    <span class="item-title">時之栖</span>
+                    <span class="item-desc">有免費接駁（御殿場站↔時之栖）。</span>
+                </div>
+            </div>
+
+            <div class="item-card stay" onclick="window.open('https://maps.app.goo.gl/vs721as7EqZz1hre9')">
                 <div class="item-icon">🏨</div>
                 <div class="item-info">
                     <span class="item-title">入住御殿場周邊</span>
@@ -666,19 +723,43 @@
     <div id="d5" class="day-content">
         <div class="date-header">2/19 (四) 山中湖單車</div>
         <div class="timeline-wrapper">
+            
+            <div class="item-card note">
+                <div class="item-icon">🌤️</div>
+                <div class="item-info">
+                    <span class="item-title">重要確認</span>
+                    <span class="item-desc">提前先確認山中湖天氣資訊，看Google評論、天氣、直播...，確認能不能騎腳踏車。</span>
+                </div>
+            </div>
+
             <div class="item-card note">
                 <div class="item-icon">♨️</div>
                 <div class="item-info">
-                    <span class="item-title">早起泡溫泉 & 早餐</span>
+                    <span class="item-title">早起泡溫泉</span>
                     <span class="item-desc">
                         男生：~06:30<br>
-                        女生：06:45~09:30<br>
-                        早餐：06:30~08:30 (吃完退房)
+                        女生：06:45~09:30
                     </span>
                 </div>
             </div>
 
-            <div class="item-card urgent">
+            <div class="item-card food">
+                <div class="item-icon">🍳</div>
+                <div class="item-info">
+                    <span class="item-title">06:45 起床吃早餐</span>
+                    <span class="item-desc">8點前吃完，再次確認行李 (用餐時段 06:30~08:30)。</span>
+                </div>
+            </div>
+
+            <div class="item-card shop" onclick="window.open('https://maps.app.goo.gl/ACFE4DBRbQepm3957')">
+                <div class="item-icon">🛒</div>
+                <div class="item-info">
+                    <span class="item-title">Aeon 買小零食</span>
+                    <span class="item-desc">採買零食。</span>
+                </div>
+            </div>
+
+            <div class="item-card transport-card">
                 <div class="item-icon">🚕</div>
                 <div class="item-info">
                     <span class="item-title">09:00 計程車</span>
@@ -686,11 +767,11 @@
                 </div>
             </div>
 
-            <div class="item-card urgent">
+            <div class="item-card transport-card">
                 <div class="item-icon">🚌</div>
                 <div class="item-info">
                     <span class="item-title">09:29 巴士</span>
-                    <span class="item-desc">前往山中湖 (約 10:00 抵達)。</span>
+                    <span class="item-desc">前往山中湖 (約 10:22 抵達)。</span>
                 </div>
             </div>
 
@@ -702,12 +783,20 @@
                 </div>
             </div>
 
-            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Mihou+Bicycle+Rental+Yamanakako')">
-                <div class="item-icon">🚲</div>
+            <!-- Pre-Plan Notes -->
+            <div class="item-card note">
+                <div class="item-icon">⚠️</div>
                 <div class="item-info">
-                    <span class="time-badge">10:30</span>
-                    <span class="item-title">三穗出租單車</span>
-                    <span class="item-desc">租腳踏車環湖 3-4 小時。</span>
+                    <span class="item-title">天氣與訂房確認</span>
+                    <span class="item-desc">提前確認天氣、BNB 2/18-2/19 的出租狀況。</span>
+                </div>
+            </div>
+            
+            <div class="item-card note">
+                <div class="item-icon">🔑</div>
+                <div class="item-info">
+                    <span class="item-title">入住確認</span>
+                    <span class="item-desc">提前幾天再跟房東確認/上 BNB 自己看能否直接 check-in，先去民宿再開始行程。</span>
                 </div>
             </div>
 
@@ -715,9 +804,13 @@
             <div class="weather-plan plan-good">
                 <span class="weather-title">☀️ 天氣好方案</span>
                 <ul>
-                    <li>午餐: <a href="https://www.google.com/maps/search/?api=1&query=Marutaka+Yamanakako" target="_blank">まるたか (Marutaka)</a> (11:00-13:30)</li>
-                    <li>路線: <a href="https://www.google.com/maps/search/?api=1&query=Asahigaoka+Lakeside+Greenspace+Park" target="_blank">旭日丘湖畔綠地</a> → <a href="https://www.google.com/maps/search/?api=1&query=Hirano+no+Hama" target="_blank">平野之濱</a> → <a href="https://www.google.com/maps/search/?api=1&query=Nagaike+Water+Park" target="_blank">長池親水公園</a></li>
-                    <li>還車後，去 <a href="https://www.google.com/maps/search/?api=1&query=Shiratorihama" target="_blank">白鳥浜</a> 看日落 (約17:20)</li>
+                    <li>10:30 抵達 <a href="https://maps.app.goo.gl/vQhDJ66KCgfE3jGM9" target="_blank">三穗出租單車</a>，在那邊寄放行李，租借3~4小時 (時間可騎一整圈逆時針約15KM)，(借車鎖?)。</li>
+                    <li>停留景點: <a href="https://maps.app.goo.gl/tDgtUjnr87rtz7dB9" target="_blank">旭日丘湖畔綠地公園</a>、<a href="https://maps.app.goo.gl/Y6JgJFCv2kienXrZ6" target="_blank">平野之濱</a>。</li>
+                    <li>接著去吃午餐 <a href="https://maps.app.goo.gl/4msyNRzCxL3fwnuq6" target="_blank">Marutaka まるたか</a> (營業時間 11:00–13:30)。</li>
+                    <li>接著繼續騎乘腳踏車，停留景點: <a href="https://maps.app.goo.gl/oZE4BXpTvVv5oLXd9" target="_blank">長池親水公園</a>、<a href="https://maps.app.goo.gl/DaoRJCDugBmkxpGs9" target="_blank">白鳥浜</a>。</li>
+                    <li>之後回 <a href="https://maps.app.goo.gl/vQhDJ66KCgfE3jGM9" target="_blank">三穗出租單車</a> 還腳踏車。</li>
+                    <li>接著去超市 (<a href="https://maps.app.goo.gl/AnfUBe89ZJPqn64F6" target="_blank">オギノ 山中湖店</a>) 買晚餐+隔天早餐。</li>
+                    <li>之後走回民宿的路上經 <a href="https://maps.app.goo.gl/iEMoXuvGQhXAd3Eg9" target="_blank">Jura Noire咖啡廳</a>，在 <a href="https://maps.app.goo.gl/DaoRJCDugBmkxpGs9" target="_blank">白鳥浜</a> 看日落 (大約17:20)。</li>
                 </ul>
             </div>
             
@@ -732,14 +825,14 @@
         </div>
     </div>
 
-    <!-- D6 (Detailed Rewrite) -->
+    <!-- D6 -->
     <div id="d6" class="day-content">
         <div class="date-header">2/20 (五) 下吉田巡禮</div>
         <div class="timeline-wrapper">
             
             <div class="transport-bar">🚕 08:35 計程車 (25分) ➝ 下吉田站</div>
 
-            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Shimoyoshida+Station')">
+            <div class="item-card spot" onclick="window.open('https://maps.app.goo.gl/DPCTzRYnF9VNpaS66')">
                 <div class="item-icon">🛅</div>
                 <div class="item-info">
                     <span class="time-badge">09:00</span>
@@ -816,7 +909,7 @@
 
             <div class="transport-bar">🚶 步行 (15分)</div>
 
-            <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Shimoyoshida+Station')">
+            <div class="item-card spot" onclick="window.open('https://maps.app.goo.gl/DPCTzRYnF9VNpaS66')">
                 <div class="item-icon">🛅</div>
                 <div class="item-info">
                     <span class="time-badge">15:30</span>
@@ -841,7 +934,7 @@
                 <div class="item-info">
                     <span class="time-badge">16:30</span>
                     <span class="item-title">音樂森林美術館</span>
-                    <span class="item-desc">歐風庭園。</span>
+                    <span class="item-desc">歐風庭園，營業至 17:30。</span>
                 </div>
             </div>
 
@@ -856,7 +949,7 @@
         </div>
     </div>
 
-    <!-- D7 (Detailed) -->
+    <!-- D7 -->
     <div id="d7" class="day-content">
         <div class="date-header">2/21 (六) 河口湖 & 煙火</div>
         <div class="timeline-wrapper">
@@ -890,7 +983,7 @@
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Mt.+Fuji+Panoramic+Ropeway')">
                 <div class="item-icon">🚠</div>
                 <div class="item-info">
-                    <span class="time-badge">09:00</span>
+                    <span class="time-badge">09:00 - 10:00</span>
                     <span class="item-title">天上山公園</span>
                     <span class="item-desc">盪鞦韆(09:45開)、狸貓茶屋(09:30開)。</span>
                 </div>
@@ -901,9 +994,9 @@
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Appare+Excursion+Ship')">
                 <div class="item-icon">🚢</div>
                 <div class="item-info">
-                    <span class="time-badge">10:30</span>
+                    <span class="time-badge">10:30 - 11:00</span>
                     <span class="item-title">天晴遊覽船</span>
-                    <span class="item-desc">湖上遊覽 (約20分鐘)。</span>
+                    <span class="item-desc">湖上遊覽。<br><span style="color:#c62828; font-weight:bold;">09:00 就先問能不能換 10:30 船票</span></span>
                 </div>
             </div>
 
@@ -912,51 +1005,51 @@
             <div class="item-card food" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Hoto+Fudo+Kawaguchiko+North+Main+Shop')">
                 <div class="item-icon">🍲</div>
                 <div class="item-info">
-                    <span class="time-badge">11:20</span>
+                    <span class="time-badge">11:20 - 12:20</span>
                     <span class="item-title">ほうとう不動 北本店</span>
                     <span class="item-desc">午餐吃餺飥麵。</span>
                 </div>
             </div>
 
-            <div class="transport-bar">🚶 步行 ➝ 神社</div>
+            <div class="transport-bar">🚶 步行 12:20 - 12:40 ➝ 神社</div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Kawaguchi+Asama+Shrine')">
                 <div class="item-icon">⛩️</div>
                 <div class="item-info">
-                    <span class="time-badge">12:20</span>
+                    <span class="time-badge">13:00 - 13:20</span>
                     <span class="item-title">河口淺間神社</span>
                     <span class="item-desc">參拜古老杉樹。</span>
                 </div>
             </div>
 
-            <div class="transport-bar">🚶 步行爬坡 (約25分) ➝ 遙拜所</div>
+            <div class="transport-bar">🚶 步行爬坡 13:20 - 14:10 ➝ 遙拜所</div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/place/Mount+Fuji+Distant+Worship+Site+(Tenku+no+Torii)+Torii+View/@35.5347129,138.7777561,17z/data=!3m1!4b1!4m6!3m5!1s0x60195f492d41ab6b:0xad7123bb16512cec!8m2!3d35.5347129!4d138.7777561!16s%2Fg%2F11fqfsyc01?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D')">
                 <div class="item-icon">⛩️</div>
                 <div class="item-info">
-                    <span class="time-badge">14:10</span>
+                    <span class="time-badge">14:10 - 15:00</span>
                     <span class="item-title">天空鳥居 (遙拜所)</span>
                     <span class="item-desc">熱門拍照點。</span>
                 </div>
             </div>
 
-            <div class="transport-bar">🚕 計程車/步行 ➝ 大石公園</div>
+            <div class="transport-bar">🚶/🚕 15:00 - 15:40 走路下山、搭計程車到大石公園</div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Oishi+Park')">
                 <div class="item-icon">🌿</div>
                 <div class="item-info">
-                    <span class="time-badge">15:40</span>
+                    <span class="time-badge">15:40 - 16:00</span>
                     <span class="item-title">大石公園</span>
                     <span class="item-desc">湖畔散步，吃冰淇淋。</span>
                 </div>
             </div>
 
-            <div class="transport-bar">🚶 步行 ➝ 長崎公園</div>
+            <div class="transport-bar">🚶 步行 16:00 - 16:15 ➝ 長崎公園</div>
 
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Nagasaki+Park+Kawaguchiko')">
                 <div class="item-icon">🌅</div>
                 <div class="item-info">
-                    <span class="time-badge">16:15</span>
+                    <span class="time-badge">16:10 - 17:34</span>
                     <span class="item-title">長崎公園</span>
                     <span class="item-desc">欣賞日落。</span>
                 </div>
@@ -973,7 +1066,7 @@
             <div class="item-card spot">
                 <div class="item-icon">🎆</div>
                 <div class="item-info">
-                    <span class="time-badge">20:00</span>
+                    <span class="time-badge">20:00 - 20:20</span>
                     <span class="item-title">河口湖冬花火</span>
                     <span class="item-desc">冬季煙火大會。</span>
                 </div>
@@ -993,11 +1086,20 @@
     <div id="d8" class="day-content">
         <div class="date-header">2/22 (日) 返京秋葉原</div>
         <div class="timeline-wrapper">
-            <div class="item-card urgent">
+            <div class="item-card transport-card">
                 <div class="item-icon">🚕</div>
                 <div class="item-info">
-                    <span class="item-title">08:20 離開飯店</span>
-                    <span class="item-desc">前往河口湖車站。</span>
+                    <span class="item-title">07:50 離開飯店</span>
+                    <span class="item-desc">坐計程車到河口湖站(8min，希望走河口湖大橋)。</span>
+                </div>
+            </div>
+
+            <div class="item-card food" onclick="window.open('https://www.google.com/maps?cid=6997495198343809878')">
+                <div class="item-icon">🥪</div>
+                <div class="item-info">
+                    <span class="time-badge">08:00</span>
+                    <span class="item-title">河口湖羅森買早餐</span>
+                    <span class="item-desc">Lawson 便利商店。</span>
                 </div>
             </div>
 
@@ -1012,8 +1114,9 @@
             <div class="item-card stay" onclick="window.open('https://www.google.com/maps?cid=606669336068395787')">
                 <div class="item-icon">🏨</div>
                 <div class="item-info">
+                    <span class="time-badge">11:40</span>
                     <span class="item-title">東京市區住宿 (新)</span>
-                    <span class="item-desc">放置行李。</span>
+                    <span class="item-desc">抵達並放置行李。</span>
                 </div>
             </div>
 
@@ -1074,8 +1177,17 @@
             <div class="item-card spot" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Kichijoji+Station')">
                 <div class="item-icon">🛍️</div>
                 <div class="item-info">
+                    <span class="time-badge">下午</span>
                     <span class="item-title">吉祥寺</span>
                     <span class="item-desc">商店街藥妝採購。</span>
+                </div>
+            </div>
+
+            <div class="item-card food">
+                <div class="item-icon">🍳</div>
+                <div class="item-info">
+                    <span class="item-title">晚餐 (自煮)</span>
+                    <span class="item-desc">超市採買晚餐。</span>
                 </div>
             </div>
         </div>
@@ -1094,7 +1206,7 @@
 
             <div class="transport-bar">🚇 市區 ➝ 台場/東雲</div>
 
-            <div class="item-card food">
+            <div class="item-card shop">
                 <div class="item-icon">🛒</div>
                 <div class="item-info">
                     <span class="item-title">猛健樂</span>
@@ -1165,19 +1277,21 @@
 <script>
     // Tab Switching Logic
     function switchDay(dayId, tabElement) {
+        // 1. Activate Content
         document.querySelectorAll('.day-content').forEach(el => el.classList.remove('active'));
         document.getElementById(dayId).classList.add('active');
+        
+        // 2. Activate Tab
         document.querySelectorAll('.day-tab').forEach(el => el.classList.remove('active'));
         tabElement.classList.add('active');
         
-        // Scroll Top
+        // 3. Scroll Content to Top
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Scroll Nav: Move clicked item to left side
+        // 4. Center the Tab in Nav Container
         const navContainer = document.getElementById('day-nav');
-        // Subtract a small padding (e.g., 5px) so it's not glued to the exact edge
-        const scrollTarget = tabElement.offsetLeft - 5;
-        navContainer.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+        const scrollLeft = tabElement.offsetLeft - (navContainer.offsetWidth / 2) + (tabElement.offsetWidth / 2);
+        navContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
     }
 
     // Menu Logic
